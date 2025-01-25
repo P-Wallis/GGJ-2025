@@ -1,0 +1,138 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxh7qyvxuvdh"]
+
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_o1b72"]
+[ext_resource type="Texture2D" uid="uid://ckmveyn5tb747" path="res://Textures/Mockup.png" id="1_x4y5u"]
+[ext_resource type="Script" path="res://Scripts/cauldron.gd" id="3_v5u1l"]
+[ext_resource type="Script" path="res://Scripts/person_zone.gd" id="4_ptsoh"]
+[ext_resource type="PackedScene" uid="uid://bgaecb25hocdj" path="res://Scenes/mug_placeholder.tscn" id="4_xt4w2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o1b72")
+
+[node name="Mockup" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -76.2712
+offset_bottom = 76.2712
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x4y5u")
+expand_mode = 5
+
+[node name="Mockup 2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.43, 0.1892, 0.43, 0)
+
+[node name="ColorRect2" type="ColorRect" parent="Mockup 2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 718.0
+offset_top = 164.0
+offset_right = -78.0
+offset_bottom = -123.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0491279, 0.0092753, 0.049504, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Mockup 2/ColorRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 13.0
+offset_right = -17.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2048, 0.1472, 0.32, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Mockup 2/ColorRect2/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 244.0
+offset_right = -58.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6, 0.3011, 0.234, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Mockup 2/ColorRect2/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 98.0
+offset_top = 115.0
+offset_right = -106.0
+offset_bottom = -112.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6, 0.3011, 0.234, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Mockup 2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 92.0
+offset_top = 397.0
+offset_right = -712.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0491279, 0.0092753, 0.049504, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Mockup 2/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 13.0
+offset_right = -17.0
+offset_bottom = -156.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.335027, 0.240054, 0.518911, 1)
+
+[node name="CauldronZone" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 355.0
+offset_right = 595.0
+offset_bottom = 699.0
+script = ExtResource("3_v5u1l")
+mugDragObject = ExtResource("4_xt4w2")
+
+[node name="PersonZone" type="Panel" parent="."]
+offset_left = 719.0
+offset_top = 166.0
+offset_right = 1073.0
+offset_bottom = 524.0
+script = ExtResource("4_ptsoh")
+
+[node name="Label" type="Label" parent="PersonZone"]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 107.0
+offset_right = 202.0
+offset_bottom = 244.0
+theme_override_font_sizes/font_size = 100
+text = "1"
