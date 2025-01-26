@@ -1,10 +1,20 @@
-[gd_scene format=3 uid="uid://bgaecb25hocdj"]
+[gd_scene load_steps=2 format=3 uid="uid://bgaecb25hocdj"]
+
+[ext_resource type="Texture2D" uid="uid://b03l1iw1qbm5w" path="res://Images/Mug.png" id="1_rucfq"]
 
 [node name="MugPlaceholder" type="ColorRect"]
 offset_right = 103.0
 offset_bottom = 135.0
+color = Color(1, 1, 1, 0)
+
+[node name="Mug" type="Sprite2D" parent="."]
+position = Vector2(80, 67)
+scale = Vector2(0.0876465, 0.0876465)
+texture = ExtResource("1_rucfq")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
 offset_left = 13.0
 offset_top = 12.0
 offset_right = 90.0
@@ -12,18 +22,24 @@ offset_bottom = 38.0
 color = Color(0.315424, 0.203793, 0.111772, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
 offset_left = 126.0
 offset_top = 45.0
 offset_right = 136.0
 offset_bottom = 97.0
 
 [node name="ColorRect2" type="ColorRect" parent="ColorRect2"]
+visible = false
+layout_mode = 0
 offset_left = -26.0
 offset_top = 1.0
 offset_right = 7.0
 offset_bottom = 12.0
 
 [node name="ColorRect3" type="ColorRect" parent="ColorRect2"]
+visible = false
+layout_mode = 0
 offset_left = -26.0
 offset_top = 41.0
 offset_right = 7.0
