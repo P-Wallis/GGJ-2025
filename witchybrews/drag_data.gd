@@ -20,10 +20,17 @@ func ModifyInputValue(inValue:int):
 			modifiedValue = 0
 		Operation.INVERT:
 			modifiedValue = ~inValue
+			modifiedValue &= 511 #mask to just the first 9 bits
 		Operation.SHIFT_LEFT:
+			var wasRightmostBitSet = (inValue & 256) > 0
 			modifiedValue = inValue << 1
+			modifiedValue &= 510 #mask just the bits that moved
+			if(wasRightmostBitSet): modifiedValue += 1 #move the bit from the end to the other side
 		Operation.SHIFT_RIGHT:
+			var wasLeftmostBitSet = (inValue & 1) > 0
 			modifiedValue = inValue >> 1
+			modifiedValue &= 255 #mask just the bits that moved
+			if(wasLeftmostBitSet): modifiedValue += 256 #move the bit from the end to the other side
 		Operation.AND:
 			modifiedValue = inValue & value
 		Operation.OR:
