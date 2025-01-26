@@ -18,11 +18,12 @@
 [ext_resource type="Texture2D" uid="uid://cq3vgstrl2tij" path="res://Textures/Character/Timid Brows.png" id="17_msqm1"]
 [ext_resource type="Texture2D" uid="uid://dftwptpk5ga46" path="res://Textures/Character/TiredEyes.png" id="18_ly527"]
 
-[node name="Person" type="Panel" node_paths=PackedStringArray("tiredEyes", "alertEyes", "timidBrows", "confidentBrows", "smile", "frown", "nose", "stink", "halo", "horns", "damp", "shamrock", "skull", "ghost")]
+[node name="Person" type="Panel" node_paths=PackedStringArray("graphicsRoot", "tiredEyes", "alertEyes", "timidBrows", "confidentBrows", "smile", "frown", "nose", "stink", "halo", "horns", "damp", "shamrock", "skull", "ghost")]
 offset_right = 300.0
 offset_bottom = 302.0
 mouse_default_cursor_shape = 7
 script = ExtResource("1_h3ygc")
+graphicsRoot = NodePath("Graphics")
 tiredEyes = NodePath("Graphics/TiredEyes")
 alertEyes = NodePath("Graphics/AlertEyes")
 timidBrows = NodePath("Graphics/TimidBrows")

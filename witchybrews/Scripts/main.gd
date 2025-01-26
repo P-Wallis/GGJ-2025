@@ -1,11 +1,30 @@
 extends Control
+class_name Main
 
+@onready var dialoguePanel:Control = get_node("DialoguePanel")
+@onready var dialogueLabel:Label = get_node("DialoguePanel/DialogueLabel")
 
-# Called when the node enters the scene tree for the first time.
+@export var person:Person
 func _ready() -> void:
-	pass # Replace with function body.
+	person.initialize(self)
+	start()
 
+var difficulty:Person.difficulty = Person.difficulty.VERY_EASY
+func start():
+	person.generateNewState(difficulty)
+	showDialogue("Hey! I'm hoping you can help me with something... I'd like to:" +person.getDesireList())
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func end():
+	person.visible = false
+	showDialogue("Nice work! No more customers today")
+
+func showDialogue(text:String):
+	dialoguePanel.visible = true
+	dialogueLabel.text = text
+	
+func success():
+	if(difficulty != Person.difficulty.HARD):
+		difficulty += 1
+		start()
+		return
+	end()

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cx6gs2p6ox5i8" path="res://Scenes/cauldron.tscn" id="4_meep4"]
 [ext_resource type="PackedScene" uid="uid://c8xk8mhihvyxy" path="res://Scenes/IngredientShelf.tscn" id="5_7kior"]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" node_paths=PackedStringArray("person")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,6 +14,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o1b72")
+person = NodePath("Person")
 
 [node name="Mockup 2" type="ColorRect" parent="."]
 visible = false
@@ -127,8 +128,30 @@ offset_right = 680.0
 offset_bottom = 670.0
 
 [node name="IngredientShelf" parent="." instance=ExtResource("5_7kior")]
+visible = false
 layout_mode = 0
 offset_left = 131.0
 offset_top = 111.0
 offset_right = 666.0
 offset_bottom = 254.0
+
+[node name="DialoguePanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 726.0
+offset_top = 479.0
+offset_right = 1094.0
+offset_bottom = 644.0
+
+[node name="DialogueLabel" type="Label" parent="DialoguePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 11.0
+offset_right = -11.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hi there! I'm Winefred. Could you make me x, y, and z?"
+autowrap_mode = 2
