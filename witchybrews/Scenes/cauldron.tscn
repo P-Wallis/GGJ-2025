@@ -1,9 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://cx6gs2p6ox5i8"]
+[gd_scene load_steps=14 format=3 uid="uid://cx6gs2p6ox5i8"]
 
 [ext_resource type="Script" path="res://Scripts/cauldron.gd" id="1_j00rl"]
 [ext_resource type="PackedScene" uid="uid://bgaecb25hocdj" path="res://Scenes/mug_placeholder.tscn" id="2_qknhm"]
 [ext_resource type="Texture2D" uid="uid://dj5u68888gw7y" path="res://Textures/Cauldron.png" id="3_pdbrd"]
 [ext_resource type="Texture2D" uid="uid://cgmiu777w6jog" path="res://Textures/Cauldron_Outside.png" id="4_fs5kr"]
+[ext_resource type="Texture2D" uid="uid://xee35jdab6v4" path="res://Textures/Bubbles/Alertness.png" id="4_gp022"]
+[ext_resource type="Texture2D" uid="uid://ls3dekga67f1" path="res://Textures/Bubbles/Baptism.png" id="5_0q7td"]
+[ext_resource type="Texture2D" uid="uid://ds2my1p81ak3t" path="res://Textures/Bubbles/Confidence.png" id="6_ayu7i"]
+[ext_resource type="Texture2D" uid="uid://dyaxvwghmm5kv" path="res://Textures/Bubbles/Hauntedness.png" id="7_67cjx"]
+[ext_resource type="Texture2D" uid="uid://d0dv6l5t1ix1a" path="res://Textures/Bubbles/Looks.png" id="8_wukw4"]
+[ext_resource type="Texture2D" uid="uid://c6gwvugc7okan" path="res://Textures/Bubbles/Luckiness.png" id="9_mbe7w"]
+[ext_resource type="Texture2D" uid="uid://dotuqp7mpqorr" path="res://Textures/Bubbles/Moistness.png" id="10_3aohm"]
+[ext_resource type="Texture2D" uid="uid://cho43ry1owwr3" path="res://Textures/Bubbles/Mood.png" id="11_g65tp"]
+[ext_resource type="Texture2D" uid="uid://btyuqvqgjp21l" path="res://Textures/Bubbles/Smell.png" id="12_bvyhs"]
 
 [node name="Cauldron" type="Control"]
 layout_mode = 3
@@ -15,27 +24,242 @@ mugDragObject = ExtResource("2_qknhm")
 
 [node name="CauldronInside" type="TextureRect" parent="."]
 layout_mode = 0
-offset_top = 1.0
+offset_top = 65.0
 offset_right = 553.0
-offset_bottom = 435.0
+offset_bottom = 499.0
 texture = ExtResource("3_pdbrd")
 expand_mode = 1
 stretch_mode = 4
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 146.0
-offset_top = -12.0
-offset_right = 403.0
-offset_bottom = 57.0
-theme_override_font_sizes/font_size = 50
-text = "000000000"
+offset_left = 88.0
+offset_top = -21.0
+offset_right = 468.0
+offset_bottom = 138.0
+alignment = 1
+
+[node name="Alertness" type="Control" parent="HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(40, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Alertness"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_gp022")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Baptism" type="Control" parent="HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(40, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Baptism"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_0q7td")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Confidence" type="Control" parent="HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(40, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Confidence"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_ayu7i")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Hauntedness" type="Control" parent="HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(40, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Hauntedness"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_67cjx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Looks" type="Control" parent="HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(40, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Looks"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_wukw4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Luck" type="Control" parent="HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(40, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Luck"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_mbe7w")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Moisture" type="Control" parent="HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(40, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Moisture"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_3aohm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Mood" type="Control" parent="HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(40, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Mood"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_g65tp")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Smell" type="Control" parent="HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(40, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Smell"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_bvyhs")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="CauldronOutside" type="TextureRect" parent="."]
-offset_top = 2.0
+offset_top = 66.0
 offset_right = 553.0
-offset_bottom = 436.0
+offset_bottom = 500.0
 texture = ExtResource("4_fs5kr")
 expand_mode = 1
 stretch_mode = 4
