@@ -257,6 +257,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="CauldronOutside" type="TextureRect" parent="."]
+layout_mode = 0
 offset_top = 66.0
 offset_right = 553.0
 offset_bottom = 500.0

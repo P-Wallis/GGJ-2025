@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8xk8mhihvyxy"]
+
+[ext_resource type="PackedScene" uid="uid://ctcbn2hxr7qot" path="res://Scenes/ingredient.tscn" id="1_xlcwl"]
+
+[node name="IngerdientShelf" type="HBoxContainer"]
+offset_right = 535.0
+offset_bottom = 143.0
+alignment = 1
+
+[node name="Ingredient1" parent="." instance=ExtResource("1_xlcwl")]
+layout_mode = 2
+operation = 7
+energy = true
+confidence = true
+mood = true
+
+[node name="Ingredient2" parent="." instance=ExtResource("1_xlcwl")]
+layout_mode = 2
+operation = 3
+
+[node name="Ingredient3" parent="." instance=ExtResource("1_xlcwl")]
+layout_mode = 2
+operation = 4

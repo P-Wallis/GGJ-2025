@@ -1,6 +1,8 @@
 extends Control
 class_name Ingredient
 
+@export var mainTexture:Texture2D
+@export var dragTexture:Texture2D
 @export var operation:DragData.Operation
 
 @export var energy:bool
@@ -12,6 +14,12 @@ class_name Ingredient
 @export var mood:bool
 @export var moisture:bool
 @export var baptizm:bool
+
+var graphic:TextureRect
+
+func _ready():
+	graphic = get_node("Graphic")
+	graphic.texture = mainTexture
 
 func getValue():
 	var value:int = 0
@@ -27,5 +35,7 @@ func getValue():
 	return value
 
 func _get_drag_data(at_position:Vector2)->Variant:
-	set_drag_preview(get_node("Graphic").duplicate())
+	var newGraphic:TextureRect = get_node("Graphic").duplicate() as TextureRect
+	newGraphic.texture = dragTexture
+	set_drag_preview(newGraphic)
 	return DragData.new(DragData.DragType.INGREDIENT, getValue(), operation)
