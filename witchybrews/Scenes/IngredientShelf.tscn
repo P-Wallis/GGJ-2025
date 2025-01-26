@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://r4s3ahhv4w2u" path="res://Images/Ink Drop.png" id="9_ssfyh"]
 [ext_resource type="Texture2D" uid="uid://xp85iea5vx1j" path="res://Images/GlovesOnFox.png" id="10_0v2cg"]
 [ext_resource type="Texture2D" uid="uid://cskgon2e4cfnv" path="res://Images/Glove.png" id="11_0f420"]
-[ext_resource type="Texture2D" uid="uid://cs3lqf1i1r22r" path="res://Images/Santa Water.png" id="14_1elad"]
+[ext_resource type="Texture2D" uid="uid://dbuwbgf2yetks" path="res://Images/Santa Water.png" id="14_1elad"]
 [ext_resource type="Texture2D" uid="uid://blff7k2mhhhoi" path="res://Images/Spoon.png" id="14_xn7jq"]
 [ext_resource type="Texture2D" uid="uid://udfgjybguqux" path="res://Images/Santa Water Water.png" id="15_hrxg3"]
 
