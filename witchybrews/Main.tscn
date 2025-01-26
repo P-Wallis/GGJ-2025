@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://g0yt2p6cm5o4"]
+[gd_scene load_steps=7 format=3 uid="uid://cxh7qyvxuvdh"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_o1b72"]
 [ext_resource type="Texture2D" uid="uid://ckmveyn5tb747" path="res://Textures/Mockup.png" id="1_x4y5u"]
@@ -157,7 +157,10 @@ offset_right = 118.0
 offset_bottom = 186.0
 mouse_default_cursor_shape = 2
 script = ExtResource("6_prf5t")
-operation = 2
+operation = 7
+energy = true
+ghostyness = true
+mood = true
 
 [node name="Graphic" type="ColorRect" parent="Ingredient"]
 layout_mode = 0
