@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://cx6gs2p6ox5i8"]
+
+[ext_resource type="Script" path="res://Scripts/cauldron.gd" id="1_j00rl"]
+[ext_resource type="PackedScene" uid="uid://bgaecb25hocdj" path="res://Scenes/mug_placeholder.tscn" id="2_qknhm"]
+[ext_resource type="Texture2D" uid="uid://dj5u68888gw7y" path="res://Textures/Cauldron.png" id="3_pdbrd"]
+[ext_resource type="Texture2D" uid="uid://cgmiu777w6jog" path="res://Textures/Cauldron_Outside.png" id="4_fs5kr"]
+
+[node name="Cauldron" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 554.0
+offset_bottom = 344.0
+script = ExtResource("1_j00rl")
+mugDragObject = ExtResource("2_qknhm")
+
+[node name="CauldronInside" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 553.0
+offset_bottom = 435.0
+texture = ExtResource("3_pdbrd")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 146.0
+offset_top = -12.0
+offset_right = 403.0
+offset_bottom = 57.0
+theme_override_font_sizes/font_size = 50
+text = "000000000"
+
+[node name="CauldronOutside" type="TextureRect" parent="."]
+offset_top = 2.0
+offset_right = 553.0
+offset_bottom = 436.0
+texture = ExtResource("4_fs5kr")
+expand_mode = 1
+stretch_mode = 4
+metadata/_edit_lock_ = true

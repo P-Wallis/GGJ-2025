@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxh7qyvxuvdh"]
+[gd_scene load_steps=6 format=3 uid="uid://cxh7qyvxuvdh"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_o1b72"]
-[ext_resource type="Texture2D" uid="uid://ckmveyn5tb747" path="res://Textures/Mockup.png" id="1_x4y5u"]
-[ext_resource type="Script" path="res://Scripts/cauldron.gd" id="3_v5u1l"]
+[ext_resource type="Texture2D" uid="uid://ybml52jk75bd" path="res://Textures/Background.png" id="2_gywbl"]
+[ext_resource type="PackedScene" uid="uid://cx6gs2p6ox5i8" path="res://Scenes/cauldron.tscn" id="4_meep4"]
 [ext_resource type="Script" path="res://Scripts/person_zone.gd" id="4_ptsoh"]
-[ext_resource type="PackedScene" uid="uid://bgaecb25hocdj" path="res://Scenes/mug_placeholder.tscn" id="4_xt4w2"]
 [ext_resource type="Script" path="res://Scripts/ingredient.gd" id="6_prf5t"]
 
 [node name="Control" type="Control"]
@@ -15,18 +14,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o1b72")
-
-[node name="Mockup" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -76.2712
-offset_bottom = 76.2712
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_x4y5u")
-expand_mode = 5
 
 [node name="Mockup 2" type="ColorRect" parent="."]
 layout_mode = 1
@@ -113,33 +100,16 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.335027, 0.240054, 0.518911, 1)
 
-[node name="CauldronZone" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 41.0
-offset_top = 355.0
-offset_right = 595.0
-offset_bottom = 699.0
-script = ExtResource("3_v5u1l")
-mugDragObject = ExtResource("4_xt4w2")
-
-[node name="Label" type="Label" parent="CauldronZone"]
-layout_mode = 0
-offset_left = 91.0
-offset_top = 58.0
-offset_right = 348.0
-offset_bottom = 127.0
-theme_override_font_sizes/font_size = 50
-text = "000000000"
-
-[node name="PersonZone" type="Panel" parent="."]
+[node name="Person" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 719.0
 offset_top = 166.0
 offset_right = 1073.0
 offset_bottom = 524.0
+mouse_default_cursor_shape = 7
 script = ExtResource("4_ptsoh")
 
-[node name="Label" type="Label" parent="PersonZone"]
+[node name="Label" type="Label" parent="Person"]
 layout_mode = 0
 offset_left = 145.0
 offset_top = 107.0
@@ -148,13 +118,35 @@ offset_bottom = 244.0
 theme_override_font_sizes/font_size = 100
 text = "1"
 
-[node name="Ingredient" type="Control" parent="."]
-custom_minimum_size = Vector2(0, -0.13)
-anchors_preset = 0
-offset_left = 44.0
-offset_top = 50.0
-offset_right = 118.0
-offset_bottom = 186.0
+[node name="VanBack" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_gywbl")
+expand_mode = 3
+
+[node name="Cauldron" parent="." instance=ExtResource("4_meep4")]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 366.0
+offset_right = 680.0
+offset_bottom = 710.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 117.0
+offset_right = 665.0
+offset_bottom = 260.0
+alignment = 1
+
+[node name="Ingredient" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2(74, 136)
+layout_mode = 2
 mouse_default_cursor_shape = 2
 script = ExtResource("6_prf5t")
 operation = 7
@@ -162,43 +154,35 @@ energy = true
 ghostyness = true
 mood = true
 
-[node name="Graphic" type="ColorRect" parent="Ingredient"]
+[node name="Graphic" type="ColorRect" parent="HBoxContainer/Ingredient"]
 layout_mode = 0
 offset_right = 74.0
 offset_bottom = 136.0
 mouse_filter = 2
 color = Color(0.882353, 0.768627, 0.152941, 1)
 
-[node name="Ingredient2" type="Control" parent="."]
-custom_minimum_size = Vector2(0, -0.13)
-anchors_preset = 0
-offset_left = 142.0
-offset_top = 50.0
-offset_right = 216.0
-offset_bottom = 186.0
+[node name="Ingredient2" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2(74, 136)
+layout_mode = 2
 mouse_default_cursor_shape = 2
 script = ExtResource("6_prf5t")
 operation = 4
 
-[node name="Graphic" type="ColorRect" parent="Ingredient2"]
+[node name="Graphic" type="ColorRect" parent="HBoxContainer/Ingredient2"]
 layout_mode = 0
 offset_right = 74.0
 offset_bottom = 136.0
 mouse_filter = 2
 color = Color(0.215686, 0.192157, 0.14902, 1)
 
-[node name="Ingredient3" type="Control" parent="."]
-custom_minimum_size = Vector2(0, -0.13)
-anchors_preset = 0
-offset_left = 242.0
-offset_top = 52.0
-offset_right = 316.0
-offset_bottom = 188.0
+[node name="Ingredient3" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2(74, 136)
+layout_mode = 2
 mouse_default_cursor_shape = 2
 script = ExtResource("6_prf5t")
 operation = 3
 
-[node name="Graphic" type="ColorRect" parent="Ingredient3"]
+[node name="Graphic" type="ColorRect" parent="HBoxContainer/Ingredient3"]
 layout_mode = 0
 offset_right = 74.0
 offset_bottom = 136.0

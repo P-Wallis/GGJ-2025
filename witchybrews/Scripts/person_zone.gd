@@ -1,4 +1,4 @@
-extends Panel
+extends Control
 
 var currentValue:int = 1
 @onready var label:Label = get_node("Label");

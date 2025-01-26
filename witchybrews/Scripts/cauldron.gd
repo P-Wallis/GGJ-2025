@@ -1,4 +1,4 @@
-extends Panel
+extends Control
 class_name Cauldron
 
 @export var mugDragObject:PackedScene
