@@ -23,24 +23,29 @@ offset_bottom = 143.0
 alignment = 1
 
 [node name="MixLeft" parent="." instance=ExtResource("1_xlcwl")]
+custom_minimum_size = Vector2(50, 136)
 layout_mode = 2
 mainTexture = ExtResource("2_ou3an")
 dragTexture = ExtResource("2_ou3an")
 operation = 3
 
 [node name="Milk" parent="." instance=ExtResource("1_xlcwl")]
+custom_minimum_size = Vector2(50, 136)
 layout_mode = 2
 mainTexture = ExtResource("2_6xq5b")
 dragTexture = ExtResource("3_8tnmt")
 operation = 1
 
 [node name="Uno Reverse" parent="." instance=ExtResource("1_xlcwl")]
+visible = false
+custom_minimum_size = Vector2(50, 136)
 layout_mode = 2
 mainTexture = ExtResource("5_ga7y2")
 dragTexture = ExtResource("5_ga7y2")
 operation = 2
 
 [node name="Mice" parent="." instance=ExtResource("1_xlcwl")]
+custom_minimum_size = Vector2(50, 136)
 layout_mode = 2
 mainTexture = ExtResource("4_vauc8")
 dragTexture = ExtResource("5_1i6bw")
@@ -50,6 +55,7 @@ ghostyness = true
 luck = true
 
 [node name="Rocky" parent="." instance=ExtResource("1_xlcwl")]
+custom_minimum_size = Vector2(50, 136)
 layout_mode = 2
 mainTexture = ExtResource("6_0j4sp")
 dragTexture = ExtResource("7_5bcbv")
@@ -59,6 +65,7 @@ smell = true
 confidence = true
 
 [node name="ChickenWing" parent="." instance=ExtResource("1_xlcwl")]
+custom_minimum_size = Vector2(50, 136)
 layout_mode = 2
 operation = 7
 energy = true
@@ -66,6 +73,7 @@ looks = true
 mood = true
 
 [node name="Ink" parent="." instance=ExtResource("1_xlcwl")]
+custom_minimum_size = Vector2(50, 136)
 layout_mode = 2
 mainTexture = ExtResource("8_5gq0j")
 dragTexture = ExtResource("9_ssfyh")
@@ -75,6 +83,7 @@ mood = true
 baptizm = true
 
 [node name="FoxGlove" parent="." instance=ExtResource("1_xlcwl")]
+custom_minimum_size = Vector2(50, 136)
 layout_mode = 2
 mainTexture = ExtResource("10_0v2cg")
 dragTexture = ExtResource("11_0f420")
@@ -84,6 +93,7 @@ looks = true
 moisture = true
 
 [node name="SantaWater" parent="." instance=ExtResource("1_xlcwl")]
+custom_minimum_size = Vector2(50, 136)
 layout_mode = 2
 mainTexture = ExtResource("14_1elad")
 dragTexture = ExtResource("15_hrxg3")
@@ -93,6 +103,7 @@ moisture = true
 baptizm = true
 
 [node name="Mix Right" parent="." instance=ExtResource("1_xlcwl")]
+custom_minimum_size = Vector2(50, 136)
 layout_mode = 2
 mainTexture = ExtResource("14_xn7jq")
 dragTexture = ExtResource("14_xn7jq")

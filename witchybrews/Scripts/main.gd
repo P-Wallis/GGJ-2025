@@ -12,7 +12,10 @@ func _ready() -> void:
 var difficulty:Person.difficulty = Person.difficulty.VERY_EASY
 func start():
 	person.generateNewState(difficulty)
-	showDialogue("Hey! I'm hoping you can help me with something... I'd like to:" +person.getDesireList())
+	var names = ["Winefred", "Suzie", "Mice", "Sugar"]
+	var randomName = names[randi_range(0,names.size()-1)]
+	var dialogue:String = "Hey, I'm " + randomName +"! I'm hoping you can help me with something... I'd like to:" +person.getDesireList()
+	showDialogue(dialogue)
 
 func end():
 	person.visible = false

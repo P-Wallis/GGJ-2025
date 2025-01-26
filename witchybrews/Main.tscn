@@ -130,9 +130,9 @@ offset_bottom = 670.0
 [node name="IngredientShelf" parent="." instance=ExtResource("5_7kior")]
 layout_mode = 0
 offset_left = 131.0
-offset_top = 111.0
-offset_right = 666.0
-offset_bottom = 254.0
+offset_top = 153.0
+offset_right = 667.0
+offset_bottom = 296.0
 
 [node name="DialoguePanel" type="Panel" parent="."]
 layout_mode = 0
