@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c8xk8mhihvyxy"]
+[gd_scene load_steps=17 format=3 uid="uid://c8xk8mhihvyxy"]
 
 [ext_resource type="PackedScene" uid="uid://ctcbn2hxr7qot" path="res://Scenes/ingredient.tscn" id="1_xlcwl"]
 [ext_resource type="Texture2D" uid="uid://cydx2mlne87bo" path="res://Images/Milk.png" id="2_6xq5b"]
@@ -13,7 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://r4s3ahhv4w2u" path="res://Images/Ink Drop.png" id="9_ssfyh"]
 [ext_resource type="Texture2D" uid="uid://xp85iea5vx1j" path="res://Images/GlovesOnFox.png" id="10_0v2cg"]
 [ext_resource type="Texture2D" uid="uid://cskgon2e4cfnv" path="res://Images/Glove.png" id="11_0f420"]
+[ext_resource type="Texture2D" uid="uid://cs3lqf1i1r22r" path="res://Images/Santa Water.png" id="14_1elad"]
 [ext_resource type="Texture2D" uid="uid://blff7k2mhhhoi" path="res://Images/Spoon.png" id="14_xn7jq"]
+[ext_resource type="Texture2D" uid="uid://udfgjybguqux" path="res://Images/Santa Water Water.png" id="15_hrxg3"]
 
 [node name="IngerdientShelf" type="HBoxContainer"]
 offset_right = 535.0
@@ -55,15 +57,13 @@ operation = 7
 energy = true
 smell = true
 confidence = true
-looks = true
-moisture = true
 
 [node name="ChickenWing" parent="." instance=ExtResource("1_xlcwl")]
 layout_mode = 2
 operation = 7
 energy = true
+looks = true
 mood = true
-baptizm = true
 
 [node name="Ink" parent="." instance=ExtResource("1_xlcwl")]
 layout_mode = 2
@@ -71,7 +71,6 @@ mainTexture = ExtResource("8_5gq0j")
 dragTexture = ExtResource("9_ssfyh")
 operation = 7
 ghostyness = true
-luck = true
 mood = true
 baptizm = true
 
@@ -83,6 +82,15 @@ operation = 7
 confidence = true
 looks = true
 moisture = true
+
+[node name="SantaWater" parent="." instance=ExtResource("1_xlcwl")]
+layout_mode = 2
+mainTexture = ExtResource("14_1elad")
+dragTexture = ExtResource("15_hrxg3")
+operation = 7
+luck = true
+moisture = true
+baptizm = true
 
 [node name="Mix Right" parent="." instance=ExtResource("1_xlcwl")]
 layout_mode = 2
