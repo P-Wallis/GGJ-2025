@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_o1b72"]
 [ext_resource type="Texture2D" uid="uid://ybml52jk75bd" path="res://Textures/Background.png" id="2_gywbl"]
-[ext_resource type="PackedScene" uid="uid://cx6gs2p6ox5i8" path="res://Scenes/cauldron.tscn" id="4_meep4"]
+[ext_resource type="PackedScene" path="res://Scenes/cauldron.tscn" id="4_meep4"]
 [ext_resource type="Script" path="res://Scripts/person_zone.gd" id="4_ptsoh"]
 [ext_resource type="Script" path="res://Scripts/ingredient.gd" id="6_prf5t"]
 
