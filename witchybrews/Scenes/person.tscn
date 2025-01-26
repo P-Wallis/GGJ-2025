@@ -1,0 +1,343 @@
+[gd_scene load_steps=18 format=3 uid="uid://c7xvq8yctfmsu"]
+
+[ext_resource type="Script" path="res://Scripts/person.gd" id="1_h3ygc"]
+[ext_resource type="Texture2D" uid="uid://btyu0475ts5jm" path="res://Textures/Character/AlertEyes.png" id="3_8bnuq"]
+[ext_resource type="Texture2D" uid="uid://d1k1abqhp25yt" path="res://Textures/Character/Lady.png" id="3_bdbo8"]
+[ext_resource type="Texture2D" uid="uid://bq3feuq28321j" path="res://Textures/Character/Confident Brows.png" id="4_6prh5"]
+[ext_resource type="Texture2D" uid="uid://ut7heubewbw7" path="res://Textures/Character/Damp.png" id="5_4l10j"]
+[ext_resource type="Texture2D" uid="uid://b07narkohke4s" path="res://Textures/Character/Frown.png" id="6_i6340"]
+[ext_resource type="Texture2D" uid="uid://bpwgovwwhfi5f" path="res://Textures/Character/Ghost.png" id="7_qkorj"]
+[ext_resource type="Texture2D" uid="uid://lorrmjheqeel" path="res://Textures/Character/HairTop.png" id="8_702xj"]
+[ext_resource type="Texture2D" uid="uid://2qfknoa7j5tu" path="res://Textures/Character/Halo.png" id="9_6i3ah"]
+[ext_resource type="Texture2D" uid="uid://5ep0hbhbsixb" path="res://Textures/Character/Horns.png" id="10_axdmm"]
+[ext_resource type="Texture2D" uid="uid://bt0phejfx7p87" path="res://Textures/Character/Nose.png" id="12_b85q5"]
+[ext_resource type="Texture2D" uid="uid://eev40m32p86s" path="res://Textures/Character/Shamrock.png" id="13_pqiq7"]
+[ext_resource type="Texture2D" uid="uid://bba6482udpbx5" path="res://Textures/Character/Skull.png" id="14_qc13r"]
+[ext_resource type="Texture2D" uid="uid://buv5edkxn348h" path="res://Textures/Character/Smile.png" id="15_b32k3"]
+[ext_resource type="Texture2D" uid="uid://b6u7xcxlsa0ee" path="res://Textures/Character/Stink.png" id="16_7ef32"]
+[ext_resource type="Texture2D" uid="uid://cq3vgstrl2tij" path="res://Textures/Character/Timid Brows.png" id="17_msqm1"]
+[ext_resource type="Texture2D" uid="uid://dftwptpk5ga46" path="res://Textures/Character/TiredEyes.png" id="18_ly527"]
+
+[node name="Person" type="Panel" node_paths=PackedStringArray("tiredEyes", "alertEyes", "timidBrows", "confidentBrows", "smile", "frown", "nose", "stink", "halo", "horns", "damp", "shamrock", "skull", "ghost")]
+offset_right = 300.0
+offset_bottom = 302.0
+mouse_default_cursor_shape = 7
+script = ExtResource("1_h3ygc")
+tiredEyes = NodePath("Graphics/TiredEyes")
+alertEyes = NodePath("Graphics/AlertEyes")
+timidBrows = NodePath("Graphics/TimidBrows")
+confidentBrows = NodePath("Graphics/ConfidentBrows")
+smile = NodePath("Graphics/Smile")
+frown = NodePath("Graphics/Frown")
+nose = NodePath("Graphics/Nose")
+stink = NodePath("Graphics/Stink")
+halo = NodePath("Graphics/Halo")
+horns = NodePath("Graphics/Horns")
+damp = NodePath("Graphics/Damp")
+shamrock = NodePath("Graphics/Shamrock")
+skull = NodePath("Graphics/Skull")
+ghost = NodePath("Graphics/Ghost")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 107.0
+offset_right = 202.0
+offset_bottom = 244.0
+theme_override_font_sizes/font_size = 100
+text = "1"
+
+[node name="Graphics" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -4.0
+offset_top = 2.0
+offset_right = 305.0
+offset_bottom = 311.0
+mouse_filter = 2
+
+[node name="Lady" type="TextureRect" parent="Graphics"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.212
+anchor_top = 0.124
+anchor_right = 0.761
+anchor_bottom = 1.0
+offset_left = -0.507996
+offset_top = -0.315998
+offset_right = -0.149017
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_bdbo8")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TiredEyes" type="TextureRect" parent="Graphics"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.333
+anchor_top = 0.411
+anchor_right = 0.608
+anchor_bottom = 0.456
+offset_left = 0.00799561
+offset_top = 0.135986
+offset_right = 0.407959
+offset_bottom = 0.0559692
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("18_ly527")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="AlertEyes" type="TextureRect" parent="Graphics"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.343
+anchor_top = 0.391
+anchor_right = 0.599
+anchor_bottom = 0.473
+offset_left = -0.232025
+offset_top = -0.384033
+offset_right = -0.376038
+offset_bottom = -0.35202
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_8bnuq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TimidBrows" type="TextureRect" parent="Graphics"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.349
+anchor_top = 0.368
+anchor_right = 0.586
+anchor_bottom = 0.392
+offset_left = -0.376007
+offset_top = 0.167969
+offset_right = -0.0640259
+offset_bottom = -0.40802
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("17_msqm1")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Smile" type="TextureRect" parent="Graphics"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.359
+anchor_top = 0.509
+anchor_right = 0.598
+anchor_bottom = 0.573
+offset_left = 0.383972
+offset_top = -0.216003
+offset_right = -0.352051
+offset_bottom = 0.247986
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("15_b32k3")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Frown" type="TextureRect" parent="Graphics"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.359
+anchor_top = 0.535
+anchor_right = 0.598
+anchor_bottom = 0.573
+offset_left = 0.383972
+offset_top = 0.159973
+offset_right = -0.352051
+offset_bottom = 0.247986
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_i6340")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ConfidentBrows" type="TextureRect" parent="Graphics"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.329
+anchor_top = 0.341
+anchor_right = 0.631
+anchor_bottom = 0.413
+offset_left = 0.103973
+offset_top = -0.184021
+offset_right = -0.144043
+offset_bottom = 0.0879822
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_6prh5")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Nose" type="TextureRect" parent="Graphics"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.408
+anchor_top = 0.421
+anchor_right = 0.543
+anchor_bottom = 0.537
+offset_left = 0.207977
+offset_top = -0.104034
+offset_right = -0.0320435
+offset_bottom = 0.112
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("12_b85q5")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="HairTop" type="TextureRect" parent="Graphics"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.212
+anchor_top = 0.124
+anchor_right = 0.76
+anchor_bottom = 0.865
+offset_left = -0.0880127
+offset_top = 0.0239944
+offset_right = -0.240051
+offset_bottom = 0.239929
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("8_702xj")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Stink" type="TextureRect" parent="Graphics"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.331
+anchor_top = 0.003
+anchor_right = 0.673
+anchor_bottom = 0.152
+offset_left = 0.0559692
+offset_top = -0.072
+offset_right = -0.152039
+offset_bottom = 0.35199
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("16_7ef32")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Halo" type="TextureRect" parent="Graphics"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.324
+anchor_top = 0.098
+anchor_right = 0.638
+anchor_bottom = 0.159
+offset_left = 0.223999
+offset_top = -0.352005
+offset_right = -0.312012
+offset_bottom = 0.18399
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("9_6i3ah")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Horns" type="TextureRect" parent="Graphics"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.271
+anchor_top = 0.03
+anchor_right = 0.689
+anchor_bottom = 0.288
+offset_left = -0.504028
+offset_top = 0.279999
+offset_right = 0.463989
+offset_bottom = 0.0879822
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("10_axdmm")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Damp" type="TextureRect" parent="Graphics"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.322
+anchor_top = 0.674
+anchor_right = 0.64
+anchor_bottom = 0.852
+offset_left = 0.271973
+offset_top = -0.176025
+offset_right = -0.360046
+offset_bottom = -0.448059
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_4l10j")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Ghost" type="TextureRect" parent="Graphics"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.72
+anchor_top = 0.04
+anchor_right = 1.003
+anchor_bottom = 0.454
+offset_left = -0.280029
+offset_top = 0.0399971
+offset_right = -0.0720215
+offset_bottom = 0.103973
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_qkorj")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Shamrock" type="TextureRect" parent="Graphics"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.104
+anchor_top = 0.12
+anchor_right = 0.278
+anchor_bottom = 0.29
+offset_left = -0.496002
+offset_top = 0.119995
+offset_right = 0.327972
+offset_bottom = 0.039978
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("13_pqiq7")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Skull" type="TextureRect" parent="Graphics"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.001
+anchor_top = 0.296
+anchor_right = 0.191
+anchor_bottom = 0.489
+offset_left = -0.024
+offset_top = -0.104004
+offset_right = 0.415985
+offset_bottom = 0.263977
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("14_qc13r")
+expand_mode = 1
+stretch_mode = 4
