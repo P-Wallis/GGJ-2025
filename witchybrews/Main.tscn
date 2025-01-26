@@ -128,7 +128,6 @@ offset_right = 680.0
 offset_bottom = 670.0
 
 [node name="IngredientShelf" parent="." instance=ExtResource("5_7kior")]
-visible = false
 layout_mode = 0
 offset_left = 131.0
 offset_top = 111.0
