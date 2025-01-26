@@ -37,5 +37,8 @@ func getValue():
 func _get_drag_data(at_position:Vector2)->Variant:
 	var newGraphic:TextureRect = get_node("Graphic").duplicate() as TextureRect
 	newGraphic.texture = dragTexture
-	set_drag_preview(newGraphic)
+	var preview = Control.new()
+	preview.add_child(newGraphic)
+	newGraphic.position = -0.5 * newGraphic.size
+	set_drag_preview(preview)
 	return DragData.new(DragData.DragType.INGREDIENT, getValue(), operation)
