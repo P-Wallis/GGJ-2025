@@ -1,23 +1,76 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8xk8mhihvyxy"]
+[gd_scene load_steps=15 format=3 uid="uid://c8xk8mhihvyxy"]
 
 [ext_resource type="PackedScene" uid="uid://ctcbn2hxr7qot" path="res://Scenes/ingredient.tscn" id="1_xlcwl"]
+[ext_resource type="Texture2D" uid="uid://cydx2mlne87bo" path="res://Images/Milk.png" id="2_6xq5b"]
+[ext_resource type="Texture2D" uid="uid://cux71afv1lebl" path="res://Images/SpoonFlip.png" id="2_ou3an"]
+[ext_resource type="Texture2D" uid="uid://b1vg7gn1wbepm" path="res://Images/MilkDrop.png" id="3_8tnmt"]
+[ext_resource type="Texture2D" uid="uid://dt7oesos81cqf" path="res://Images/MouseBox.png" id="4_vauc8"]
+[ext_resource type="Texture2D" uid="uid://d0ky36l41b5qr" path="res://Images/Mouse.png" id="5_1i6bw"]
+[ext_resource type="Texture2D" uid="uid://ddvlfhxvwlls7" path="res://Images/Uno_Reverse_Card.png" id="5_ga7y2"]
+[ext_resource type="Texture2D" uid="uid://hd8f2lavnnru" path="res://Images/VHS_Rocky.png" id="6_0j4sp"]
+[ext_resource type="Texture2D" uid="uid://d20la4517fp8b" path="res://Images/VHS_Tape.png" id="7_5bcbv"]
+[ext_resource type="Texture2D" uid="uid://c4evjpo18por0" path="res://Images/Ink Well.png" id="8_5gq0j"]
+[ext_resource type="Texture2D" uid="uid://r4s3ahhv4w2u" path="res://Images/Ink Drop.png" id="9_ssfyh"]
+[ext_resource type="Texture2D" uid="uid://xp85iea5vx1j" path="res://Images/GlovesOnFox.png" id="10_0v2cg"]
+[ext_resource type="Texture2D" uid="uid://cskgon2e4cfnv" path="res://Images/Glove.png" id="11_0f420"]
+[ext_resource type="Texture2D" uid="uid://blff7k2mhhhoi" path="res://Images/Spoon.png" id="14_xn7jq"]
 
 [node name="IngerdientShelf" type="HBoxContainer"]
 offset_right = 535.0
 offset_bottom = 143.0
 alignment = 1
 
-[node name="Ingredient1" parent="." instance=ExtResource("1_xlcwl")]
+[node name="MixLeft" parent="." instance=ExtResource("1_xlcwl")]
+layout_mode = 2
+mainTexture = ExtResource("2_ou3an")
+dragTexture = ExtResource("2_ou3an")
+operation = 3
+
+[node name="Milk" parent="." instance=ExtResource("1_xlcwl")]
+layout_mode = 2
+mainTexture = ExtResource("2_6xq5b")
+dragTexture = ExtResource("3_8tnmt")
+operation = 1
+
+[node name="Uno Reverse" parent="." instance=ExtResource("1_xlcwl")]
+layout_mode = 2
+mainTexture = ExtResource("5_ga7y2")
+dragTexture = ExtResource("5_ga7y2")
+operation = 2
+
+[node name="Mice" parent="." instance=ExtResource("1_xlcwl")]
+layout_mode = 2
+mainTexture = ExtResource("4_vauc8")
+dragTexture = ExtResource("5_1i6bw")
+operation = 3
+
+[node name="Rocky" parent="." instance=ExtResource("1_xlcwl")]
+layout_mode = 2
+mainTexture = ExtResource("6_0j4sp")
+dragTexture = ExtResource("7_5bcbv")
+operation = 4
+
+[node name="ChickenWing" parent="." instance=ExtResource("1_xlcwl")]
 layout_mode = 2
 operation = 7
 energy = true
 confidence = true
 mood = true
 
-[node name="Ingredient2" parent="." instance=ExtResource("1_xlcwl")]
+[node name="Ink" parent="." instance=ExtResource("1_xlcwl")]
 layout_mode = 2
+mainTexture = ExtResource("8_5gq0j")
+dragTexture = ExtResource("9_ssfyh")
 operation = 3
 
-[node name="Ingredient3" parent="." instance=ExtResource("1_xlcwl")]
+[node name="FoxGlove" parent="." instance=ExtResource("1_xlcwl")]
 layout_mode = 2
+mainTexture = ExtResource("10_0v2cg")
+dragTexture = ExtResource("11_0f420")
+operation = 4
+
+[node name="Mix Right" parent="." instance=ExtResource("1_xlcwl")]
+layout_mode = 2
+mainTexture = ExtResource("14_xn7jq")
+dragTexture = ExtResource("14_xn7jq")
 operation = 4
